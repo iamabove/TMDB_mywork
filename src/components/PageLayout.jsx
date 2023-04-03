@@ -1,0 +1,13 @@
+import React from "react";
+
+const PageLayout = ({ children, heading, error }) => {
+  return (
+    <div className="px-3 px-lg-4 py-4 mt-5">
+      <h1 className="text-white mb-4 fs-5">{heading}</h1>
+      {error && <p className="text-white mt-4 fs-5">{error.message}</p>}
+      {children}
+    </div>
+  );
+};
+
+export default PageLayout;
